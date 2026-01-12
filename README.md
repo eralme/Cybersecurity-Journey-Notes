@@ -158,3 +158,44 @@
 <hr>
 ## Ethical Dilema
 - https://www.netacad.com/content/i2cs/7.1/courses/content/m5/en-US/assets/module5.pdf
+
+<br>
+<br>
+<hr>
+
+
+# Understanding the Basic Components of a Computer
+<br>
+## CPU
+- Central Processing Unit
+- Brain of Computer
+- Key Parts
+  - ALU - Aritchmetic Logic Unit - performs arithmetic (add,sub) and logical operations (AND,OR, NOT)
+  - Control Unit - coordinates most of the operations, managing data flow
+  - Registers - hold data
+
+
+- Key Metric
+  - Cores - number of independent processing units
+  - Threads - number of instructions streams a CPU can handle simultaneously
+  - Clock Speed (GHz) - number of cycles the CPU can perform per second.
+  - Cache Memory (L1, L2, L3) - store frequently accessed data.
+
+<br>
+
+## RAM
+- stores data and program instructions that the CPU needs to access quickly.
+- Key Metrics
+  - Capacity (GB)
+  - Speed - MHz or MT/s MegaTransfers per second.
+
+<br>
+## Motherboard
+- main Printed Circuit Board (PCB)
+- serves as the central communication backbone for all the hardware components.
+- connects everything together
+- Think of it as a nervous system
+
+- Key Components
+1. CPU Sockets 
+2. RAM Slots (DIMM slots) - Dual Inline Memory Module
