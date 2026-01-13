@@ -1,201 +1,331 @@
+# Cybersecurity & IT Fundamentals Notes
 
+---
 
 ## 4.1 Cybersecurity Devices and Technologies
-### 4.1.1 Security Appliances
-- 6 Categories 
-- 1. Routers
-- 2. Firewalls
-- 3. IPS - Intrusion Prevention System
-- 4. VPN - Virtual Private Network
-- 5. Antivirus / Antimalware
-- 6. Other Security Appliances - web/email security, other tools
 
+### Security Appliances (6 Categories)
+| Category | Description |
+|----------|-------------|
+| **Routers** | Direct network traffic |
+| **Firewalls** | Control allowed communications |
+| **IPS** | Intrusion Prevention System |
+| **VPN** | Virtual Private Network |
+| **Antivirus/Antimalware** | Detect and remove threats |
+| **Other** | Web/email security tools |
 
-<br>
-<br>
+---
+
 ## Firewalls
-- Control which communications are allowed in/out.
-- Installed in one computer or can be a standalone network device.
+
+> **Key Point:** Control which communications are allowed in/out. Can be software on one computer or a standalone network device.
 
 ### Types of Firewalls
-- 1. Network layer - source/destination ip
-- 2. Transport layer - source/destiation port, connection states
-- 3. Application layer - application, program or service
-- 4. Context aware - user, device, role, application type and threat profile
-- 5. Proxy Server - web content requests (urls, domain names and media types)
-- 6. Reverse Proxy - hide or offload and distribute access to web servers.
-- 7. Network Address Translation (NAT) firewall - hides the private addresses of network hosts.
-- 8. Host-based firewall - ports/system srvice calls on a single computer OS
+| Type | What It Filters |
+|------|-----------------|
+| **Network Layer** | Source/destination IP |
+| **Transport Layer** | Ports, connection states |
+| **Application Layer** | Apps, programs, services |
+| **Context Aware** | User, device, role, threat profile |
+| **Proxy Server** | Web content (URLs, domains, media) |
+| **Reverse Proxy** | Hides/distributes web server access |
+| **NAT Firewall** | Hides private network addresses |
+| **Host-based** | Ports/services on single OS |
 
-<br>
-<br>
-###  Port Scanning 
-- each app running in a device is assigned a port number
-- port is used on both ends of the transmission so that right data is passed to the correct app
-- Port scanning is a process of probing a computer
-- Example Applications:
-  - nmap online port scanner
-  - zenmap
+---
 
-<br>
-### Intrusion Detection and Prevention Systems
-- IDS and IPS
-- Deployed on a network to detect and prevent malicious activities
-- IDS - can be dedicated network device, tools in a server, frewall, host OS.
-- Scan data against a database of rules or attack signatures, looking for malicous traffic.
-- Job is to alert, detect, log and report. It will not take action to prevent attackes from happening.
+## Port Scanning
+- Each app uses an **assigned port number**
+- **Purpose:** Probe computers for open ports
+- **Tools:** `nmap`, `zenmap`
 
-- IPS - block or deny traffic based on a rules or signature match.
+---
 
-<br>
-<br>
-### Real-Time Detection
-- Requires actively scanning for attacks using firewal and IDS/IPS network devices. 
+## IDS vs IPS
 
+| Feature | **IDS** (Detection) | **IPS** (Prevention) |
+|---------|---------------------|----------------------|
+| Action | Alert, detect, log, report | **Block/deny traffic** |
+| Response | Passive - no prevention | Active - takes action |
 
-### Protecting Against Malware
-- One way is to use an enterprise-level advanced malware detection solution
+> **Key Difference:** IDS only alerts; IPS actually blocks attacks.
 
-### Security Best Practices
-- Some guides are found in National Institute of Standards and Technology (NIST) Computer Security Resource Center.
+---
 
-- 1. Perform risk assessment
-- 2. Create a security policy
-- 3. Physical security measures
-- 4. Human resources security measures
-- 5. Perform and test backups
-- 6. Maintain security patches and updates
-- 7. Employ access controls
-- 8. Regularly test incident response
-- 9. Implement a network monitoring, analytics and management tool
-- 10. Implement network security devices
-- 11. Implement a comprehensive endpoint security solutions
-- 12. Educate users
-- 13. Encrypt data
+## Security Best Practices (NIST Guidelines)
 
-<br>
-<br>
-<hr>
+1. Perform **risk assessment**
+2. Create a **security policy**
+3. Physical security measures
+4. Human resources security
+5. **Perform and test backups**
+6. Maintain **patches and updates**
+7. Employ **access controls**
+8. Test **incident response**
+9. Network monitoring/analytics tools
+10. Network security devices
+11. **Endpoint security** solutions
+12. **Educate users**
+13. **Encrypt data**
 
-## Behavior Approach to Cybersecurity
-<br>
-### Behavior-based Security
-- Form of threat detection that involves capturing and analyzing the flow of communication. Any changes in normal pattern can be regarding as **anomalies**
+---
 
-- Honeypots - behavior based detection tool, lures attacker in by applearing to their predicted pattern. Capture and analyze their behavior so that they can build a better defense.
+## Behavior-Based Security
 
-<br>
-### NetFlow
-- gather information flowing through a network
-- who, what devices, when and how users accesss the network
+> **Definition:** Threat detection by analyzing communication flow. Changes from normal patterns = **anomalies**
 
-<br>
-### Penetration Testing
-- assessing a computer system, network or organization for security vulnerabilities. 
-- seeks to breach systems, people, porcesses and code to uncover vulnerabilities which could be exploited.
+### Key Tools
+- **Honeypots** - Lure attackers, analyze behavior, build better defenses
+- **NetFlow** - Track who/what/when/how users access network
 
-- 5 Step pen test process
-- 1. Planning - gathers information
-- 2. Scanning - active reconnaissance 
-- 3. Gaining Access - 
-   - launching an exloit with a payload onto the system
-   - breaching the physical barriers to assets
-   - social engineering
-   - exploiting website vulnerabilities
-   - exploting software/hardware vulnerabilities or misconfigurations. 
-   - breaching access controls security
-   - cracking weak encrypted Wi-Fi
+---
 
-- 4. Maintining Access - examples are, Trojan horses, rootkits, and other covert channels.
-- 5. Analysis and reporting - provide feedback that recommens updates to products, policies and training to improve an organization's security.
+## Penetration Testing (5 Steps)
 
-<br>
-<br>
-### Impact Reduction
-- No set of security practices is foolproof.
-- Actions to do when breached is identified:
-- 1. Communicate the issue
-- 2. Be sincere and accountable
-- 3. Provide the details
-- 4. Find the cause
-- 5. Apply lessons learned
-- 6. Check, and check again
-- 7. Educate!
+| Step | Description |
+|------|-------------|
+| 1. **Planning** | Gather information |
+| 2. **Scanning** | Active reconnaissance |
+| 3. **Gaining Access** | Exploit launch, social engineering, vulnerability exploitation |
+| 4. **Maintaining Access** | Trojans, rootkits, covert channels |
+| 5. **Analysis & Reporting** | Recommendations for improvements |
 
-<br>
-<br>
-### Risk Management
-- Continuously identifying and assessing risk in an effor to reduce the impact of threas and vulnerabilities. 
-- You cannot eliminate risk completely. But you can reduce the impact.
-- 1. Frame the risk - identify threats that increase risk. May include:
-  - process
-  - products
-  - attackes
-  - potentical failure or disruption of services
-  - negative perception of an organization's reputation 
-  - potential legal liability  or loss of IP
+---
 
-- 2. Assess the Risk - quantitative and qualitative analysis
-- 3. Respond to the Risk - action plan  to reduce overall org risk exposure
-    - eliminated 
-    - mitigated
-    - transferred
-    - accepted
-- 4. Monitor the Risk - elimnation, mitigation or transfer actions. Closely monitor any threas that have been accepted. 
+## Impact Reduction (When Breached)
 
-<br>
-<br>
-<hr>
-## Cisco's Approach to Cybersecurity
-### Security Playbook
-### Tools for Incident Detection and Prevention
-- SIEM - Security Information and Event Management 
-- DLP - Data Loss Prevention System
-- ISE - Identity Services Engine
+1. **Communicate** the issue
+2. Be **sincere and accountable**
+3. Provide **details**
+4. Find the **cause**
+5. Apply **lessons learned**
+6. Check and check again
+7. **Educate!**
 
-<br>
-<br>
-<hr>
-## Ethical Dilema
-- https://www.netacad.com/content/i2cs/7.1/courses/content/m5/en-US/assets/module5.pdf
+---
 
-<br>
-<br>
-<hr>
+## Risk Management (4 Steps)
 
+> **Goal:** Reduce impact of threats - you can't eliminate risk completely
 
-# Understanding the Basic Components of a Computer
-<br>
-## CPU
-- Central Processing Unit
-- Brain of Computer
-- Key Parts
-  - ALU - Aritchmetic Logic Unit - performs arithmetic (add,sub) and logical operations (AND,OR, NOT)
-  - Control Unit - coordinates most of the operations, managing data flow
-  - Registers - hold data
+| Step | Action |
+|------|--------|
+| 1. **Frame** | Identify threats (processes, products, attacks, service disruptions) |
+| 2. **Assess** | Quantitative & qualitative analysis |
+| 3. **Respond** | Eliminate, mitigate, transfer, or accept |
+| 4. **Monitor** | Track accepted risks closely |
 
+---
 
-- Key Metric
-  - Cores - number of independent processing units
-  - Threads - number of instructions streams a CPU can handle simultaneously
-  - Clock Speed (GHz) - number of cycles the CPU can perform per second.
-  - Cache Memory (L1, L2, L3) - store frequently accessed data.
+## Cisco Security Tools
+- **SIEM** - Security Information and Event Management
+- **DLP** - Data Loss Prevention System
+- **ISE** - Identity Services Engine
 
-<br>
+---
+---
 
-## RAM
-- stores data and program instructions that the CPU needs to access quickly.
-- Key Metrics
-  - Capacity (GB)
-  - Speed - MHz or MT/s MegaTransfers per second.
+# Computer Hardware Fundamentals
 
-<br>
+## Quick Reference: Core Components
+
+| Component | Role | Key Metric |
+|-----------|------|------------|
+| **CPU** | Brain - executes instructions | Cores, Clock Speed (GHz) |
+| **RAM** | Short-term memory | Capacity (GB), Speed (MHz) |
+| **Motherboard** | Central nervous system | Socket type, PCIe slots |
+| **Storage** | Long-term memory | Capacity, Read/Write speed |
+| **GPU** | Visual processing | VRAM, Cores |
+| **PSU** | Power conversion | Wattage, Efficiency rating |
+| **Case** | Protection & cooling | Form factor, Airflow |
+
+---
+
+## CPU (Central Processing Unit)
+
+> **The Brain** - Executes instructions, performs calculations, manages data flow
+
+### Key Parts
+| Part | Function |
+|------|----------|
+| **ALU** | Arithmetic (add, subtract) + Logic (AND, OR, NOT) |
+| **Control Unit** | Coordinates operations, manages data flow |
+| **Registers** | Temporary high-speed data storage |
+
+### Key Metrics
+| Metric | What It Means |
+|--------|---------------|
+| **Cores** | Independent processing units (more = better multitasking) |
+| **Threads** | Instruction streams handled simultaneously |
+| **Clock Speed** | Cycles per second (GHz) - higher = faster |
+| **Cache (L1/L2/L3)** | Fast on-chip memory for frequent data |
+
+> **Analogy:** CPU = Head chef in kitchen. Cores = individual cooks. Threads = chef's ability to multitask. Cache = nearby pantry with common ingredients.
+
+---
+
+## RAM (Random Access Memory)
+
+> **Short-term Memory** - Fast, volatile storage for active data
+
+### Key Points
+- **Volatile** = Data lost when power off
+- Faster than storage drives
+- More RAM = more apps running smoothly
+
+### Key Metrics
+| Metric | Details |
+|--------|---------|
+| **Capacity** | 8GB (basic), 16GB (standard), 32GB+ (professional) |
+| **Speed** | MHz or MT/s - higher = faster access |
+| **Type** | DDR4 (common), DDR5 (newer, faster) |
+
+> **Analogy:** RAM = Workbench. Bigger workbench = more projects at once. Faster RAM = quicker access to tools.
+
+---
+
 ## Motherboard
-- main Printed Circuit Board (PCB)
-- serves as the central communication backbone for all the hardware components.
-- connects everything together
-- Think of it as a nervous system
 
-- Key Components
-1. CPU Sockets 
-2. RAM Slots (DIMM slots) - Dual Inline Memory Module
+> **Central Nervous System** - Connects all components together
+
+### Key Components
+| Component | Purpose |
+|-----------|---------|
+| **CPU Socket** | Where CPU installs (LGA 1700/Intel, AM5/AMD) |
+| **RAM Slots (DIMM)** | Memory module slots (usually 2-4) |
+| **Chipset** | Manages data flow between components |
+| **PCIe Slots** | High-speed expansion (GPU, NVMe) |
+| **SATA Ports** | Connect HDDs and SATA SSDs |
+| **M.2 Slots** | High-speed NVMe SSDs |
+| **BIOS/UEFI** | Firmware that initializes hardware on boot |
+
+> **Analogy:** Motherboard = Railway junction. CPU socket = main station. PCIe = express lines. Chipset = signal operator.
+
+---
+
+## Storage Devices
+
+### HDD vs SSD Comparison
+
+| Feature | **HDD** | **SSD** | **NVMe SSD** |
+|---------|---------|---------|--------------|
+| Technology | Spinning platters | Flash memory | Flash (PCIe) |
+| Speed | Slower | Fast | **Fastest** |
+| Cost per GB | Cheapest | Medium | Higher |
+| Durability | Fragile (moving parts) | **Durable** | **Durable** |
+| Best For | Bulk storage, backups | OS, apps | Performance-critical |
+
+### Speed Comparison
+- **HDD:** ~150 MB/s
+- **SATA SSD:** ~550 MB/s
+- **NVMe SSD:** **3,000-7,000+ MB/s**
+
+> **Analogy:** HDD = Physical library (walking to find books). SSD = Digital database (instant search). NVMe = Lightning-fast optimized database.
+
+---
+
+## GPU (Graphics Processing Unit)
+
+> **Visual Powerhouse** - Specialized for parallel processing and rendering
+
+### Integrated vs Dedicated
+
+| Type | Description | Best For |
+|------|-------------|----------|
+| **Integrated** | Built into CPU, shares RAM | Basic tasks, browsing |
+| **Dedicated** | Separate card with own VRAM | Gaming, video editing, AI |
+
+### Key Metrics
+| Metric | Purpose |
+|--------|---------|
+| **VRAM** | Dedicated video memory for textures/frames |
+| **Cores/Stream Processors** | Parallel processing units |
+| **Clock Speed** | Processing speed |
+
+> **Manufacturers:** NVIDIA (GeForce), AMD (Radeon), Intel (Arc)
+
+> **Analogy:** Integrated GPU = Single artist. Dedicated GPU = Team of hundreds of specialized artists working in parallel.
+
+---
+
+## PSU (Power Supply Unit)
+
+> **Energy Source** - Converts AC wall power to DC for components
+
+### Key Metrics
+| Metric | What to Know |
+|--------|--------------|
+| **Wattage** | Total power capacity (650W-1000W+ for gaming) |
+| **Efficiency (80 PLUS)** | Bronze < Silver < Gold < Platinum < Titanium |
+| **Modularity** | Non-modular / Semi / **Fully modular** (best) |
+
+> **Rule:** Always get PSU with headroom above your system's needs.
+
+---
+
+## Case (Chassis)
+
+> **Protective Shell** - Houses components, manages airflow
+
+### Key Considerations
+| Factor | Details |
+|--------|---------|
+| **Form Factor** | Full-Tower > Mid-Tower > Mini-Tower |
+| **Motherboard Support** | ATX, Micro-ATX, Mini-ITX |
+| **Airflow** | Front intake, rear/top exhaust |
+| **Cable Management** | Better cables = better airflow |
+
+---
+
+## Quick Build Guide: Use Case Examples
+
+### Casual User (Budget)
+| Component | Recommendation |
+|-----------|----------------|
+| CPU | Mid-range (Intel i5 / AMD Ryzen 5) |
+| RAM | 8-16GB DDR4 |
+| Storage | 500GB-1TB SSD |
+
+### Professional Video Editor
+| Component | Recommendation |
+|-----------|----------------|
+| CPU | High-end multi-core (i9 / Ryzen 9) |
+| RAM | **32-64GB DDR5** |
+| Storage | Fast NVMe SSD (1TB+) + HDD for archives |
+| GPU | Dedicated with high VRAM |
+
+---
+
+## Troubleshooting: Common Bottlenecks
+
+| Symptom | Likely Bottleneck | Solution |
+|---------|-------------------|----------|
+| Slow boot, app loading | **Storage (HDD)** | Upgrade to SSD |
+| Low FPS in games | **GPU** | Upgrade graphics card |
+| Sluggish multitasking | **RAM** | Add more memory |
+| Overheating, throttling | **Cooling** | Improve airflow/fans |
+
+---
+
+## Key Acronyms Reference
+
+| Acronym | Full Name |
+|---------|-----------|
+| CPU | Central Processing Unit |
+| GPU | Graphics Processing Unit |
+| RAM | Random Access Memory |
+| ROM | Read-Only Memory |
+| HDD | Hard Disk Drive |
+| SSD | Solid State Drive |
+| NVMe | Non-Volatile Memory Express |
+| PCIe | Peripheral Component Interconnect Express |
+| SATA | Serial Advanced Technology Attachment |
+| PSU | Power Supply Unit |
+| BIOS | Basic Input/Output System |
+| UEFI | Unified Extensible Firmware Interface |
+| VRAM | Video Random Access Memory |
+| ALU | Arithmetic Logic Unit |
+
+---
+
+> **Resources:** [NIST Computer Security Resource Center](https://csrc.nist.gov/)
