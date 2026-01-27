@@ -84,3 +84,39 @@ Application layer protocols for web communication. HTTP is stateless (each reque
 - **SSL/TLS:** Cryptographic protocols for secure communication
 - **Digital Certificates:** Issued by Certificate Authorities (CA) to verify server identity
 - **Encryption Process:** Client verifies cert → encrypts with public key → server decrypts with private key
+
+---
+
+### DNS (Domain Name System)
+
+Translates human-readable domain names (e.g., google.com) into IP addresses (e.g., 172.217.160.142). Often called the "phonebook of the internet."
+
+#### DNS Resolution Process
+
+1. **Browser Cache** → Check local browser cache
+2. **OS Cache** → Check operating system DNS cache
+3. **Recursive DNS Server** → Query ISP's DNS server
+4. **Root DNS Server** → Directs to appropriate TLD server
+5. **TLD DNS Server** → Directs to authoritative server (.com, .org, .net)
+6. **Authoritative DNS Server** → Returns actual IP address
+7. **Response & Caching** → IP returned to client and cached
+
+#### DNS Record Types
+
+| Record | Purpose | Example |
+|--------|---------|---------|
+| A | Maps domain to IPv4 address | example.com → 192.0.2.1 |
+| AAAA | Maps domain to IPv6 address | example.com → 2001:db8::1 |
+| CNAME | Creates alias for domain | www.example.com → example.com |
+| MX | Specifies mail servers | example.com → mail.example.com |
+| TXT | Stores text data (SPF, verification) | "v=spf1 mx -all" |
+| NS | Specifies authoritative name servers | ns1.example.com |
+| SOA | Zone authority info (primary NS, admin) | Zone serial, refresh times |
+
+#### DNS Hierarchy
+
+| Level | Description |
+|-------|-------------|
+| Root Servers | 13 logical servers (A-M) worldwide, direct to TLDs |
+| TLD Servers | Manage top-level domains (.com, .org, .net) |
+| Authoritative Servers | Store actual DNS records for domains |
